@@ -1,0 +1,240 @@
+﻿@GLOBAL_COLOR_BLACK: #080808;
+@GLOBAL_COLOR_DARK_GRAY: #A0A0A0;
+@GLOBAL_COLOR_LIGHT_GRAY: #D0D0D0;
+@GLOBAL_FONT_FAMILY-TILE: "Courier New", Courier, monospace;
+
+@GLOBAL_NAVIGATION_HEIGHT: 70px;
+@GLOBAL_NAVIGATION_TEXT_COLOR: #D0D0D0;
+
+._button(@color: #63B8EE, @hover_color: #468CCF) {
+    font-family: arial;
+    color: #14396A !important;
+    font-size: 14px;
+    padding: 10px 25px;
+    background: @color;
+    border: none;
+
+    &:hover {
+        background-color: @hover_color;
+        color: black;
+    }
+}
+
+._button-cmd(@color: #008287, @color2: #29adb2) {
+    font-family: arial;
+    color: #14396A !important;
+    font-size: 14px;
+    padding: 10px 25px;
+    background: @color;
+    border: none;
+    width: 99.989878%;
+
+    &:hover {
+        background-color: @color2;
+        color: @color2;
+    }
+}
+
+//GENERIC BORDERS FOR USE
+._border(@color: #000000) {
+    border: 2px solid @color;
+}
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+//                              END OF DECLARATIONS                                //
+/////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+//                                GRID SYSTEM                                      //
+/////////////////////////////////////////////////////////////////////////////////////
+
+.container {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:after &:before {
+        display: table;
+        line-height: 0;
+        content: "";
+    }
+}
+
+[class*="plex"] {
+    float: left;
+    min-height: 1px;
+    margin-left: 20px;
+    // TEMPORARY ////////////
+    text-align: center;
+    background-color: aqua;
+    margin-bottom: 15px;
+    /////////////////////////
+}
+
+.plex12 {
+    width: 940px;
+}
+
+.plex11 {
+    width: 860px;
+}
+
+.plex10 {
+    width: 780px;
+}
+
+.plex9 {
+    width: 700px;
+}
+
+.plex8 {
+    width: 620px;
+}
+
+.plex7 {
+    width: 540px;
+}
+
+.plex6 {
+    width: 460px;
+}
+
+.plex5 {
+    width: 380px;
+}
+
+.plex4 {
+    width: 300px;
+}
+
+.plex3 {
+    width: 220px;
+}
+
+.plex2 {
+    width: 140px;
+}
+
+.plex1 {
+    width: 60px;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////
+//                              END OF GRID SYSTEM                                 //
+/////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////////////
+//                                   NAVIGATION                                    //
+/////////////////////////////////////////////////////////////////////////////////////
+
+.navspros {
+    float: left;
+    min-height: 1px;
+    margin-left: 20px;
+    height: @GLOBAL_NAVIGATION_HEIGHT;
+    // TEMPORARY ////////////
+    text-align: center;
+    margin-bottom: 15px;
+    /////////////////////////
+}
+
+.navbar {
+    background-color: @GLOBAL_COLOR_BLACK;
+    color: @GLOBAL_COLOR_LIGHT_GRAY;
+    .container;
+    height: @GLOBAL_NAVIGATION_HEIGHT;
+
+    .navbar-logo {
+        .plex2;
+        .navspros;
+    }
+
+    .navbar-menu {
+        .plex8;
+        .navspros;
+    }
+
+        .navbar-menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+            .navbar-menu ul li {
+                display: inline;
+                float: left;
+                height:@GLOBAL_NAVIGATION_HEIGHT;
+                border-left:1px solid white;
+               
+            }
+
+            .navbar-menu ul li a {
+                color:@GLOBAL_NAVIGATION_TEXT_COLOR;
+                display:block;
+                width:70px;
+                text-decoration:none;
+                padding-top:25px;
+            }
+
+            .navbar-menu ul li a:visited {
+                color:@GLOBAL_NAVIGATION_TEXT_COLOR;
+            }
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+//                              END  NAVIGATION                                    //
+/////////////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+//                                BUTTONS                                          //
+/////////////////////////////////////////////////////////////////////////////////////
+
+.btn {
+    ._button;
+}
+
+.btn-yellow {
+    ._button( #FFFF00, #C0C0C0);
+}
+
+.btn-red {
+    ._button( #FF0000, #800000 );
+    color: white !important;
+}
+
+.btn-cmd {
+    ._button-cmd;
+}
+/////////////////////////////////////////////////////////////////////////////////////
+//                                   END BUTTONS                                   //
+/////////////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+//                                   BORDER                                        //
+/////////////////////////////////////////////////////////////////////////////////////
+
+.border {
+    ._border;
+}
+
+.border-yellow {
+    ._border(#FFFF00);
+}
+
+.border-red {
+    ._border(#FF0000)
+}
+
+/////////////////////////////////////////////////////////////////////////////////////
+//                                   END BORDERS                                   //
+/////////////////////////////////////////////////////////////////////////////////////
