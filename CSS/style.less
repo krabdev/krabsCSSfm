@@ -71,11 +71,6 @@
     float: left;
     min-height: 1px;
     margin-left: 20px;
-    // TEMPORARY ////////////
-    text-align: center;
-    background-color: aqua;
-    margin-bottom: 15px;
-    /////////////////////////
 }
 
 .plex12 {
@@ -134,59 +129,49 @@
 //                                   NAVIGATION                                    //
 /////////////////////////////////////////////////////////////////////////////////////
 
-.navspros {
-    float: left;
-    min-height: 1px;
-    margin-left: 20px;
-    height: @GLOBAL_NAVIGATION_HEIGHT;
-    // TEMPORARY ////////////
-    text-align: center;
-    margin-bottom: 15px;
-    /////////////////////////
-}
+@import url(http://fonts.googleapis.com/css?family=Old+Standard+TT);
+
+
+@GLOBAL_FONT: 'Old Standard TT', serif;
 
 .navbar {
-    background-color: @GLOBAL_COLOR_BLACK;
-    color: @GLOBAL_COLOR_LIGHT_GRAY;
-    .container;
-    height: @GLOBAL_NAVIGATION_HEIGHT;
 
-    .navbar-logo {
-        .plex2;
-        .navspros;
-    }
+    ul {
+        
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
 
-    .navbar-menu {
-        .plex8;
-        .navspros;
-    }
+        li {
+            float: left;
+            display: inline;
+            
+            a {
+                display: block;
+                min-width:80px;
+                height: 30px;
+                color: black;
+                font-family: @GLOBAL_FONT;
+  
+                padding-left:10px;
+                padding-right:10px;
+                margin-left:auto;
+                margin-right:auto;
+                text-align:center;
+                padding-top:12%;
+            }
 
-        .navbar-menu ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
+                a:link {
+                    text-decoration: none;
+                }
+
+                a:hover {
+                    border-bottom:2px solid red;
+                }
         }
-
-            .navbar-menu ul li {
-                display: inline;
-                float: left;
-                height:@GLOBAL_NAVIGATION_HEIGHT;
-                border-left:1px solid white;
-               
-            }
-
-            .navbar-menu ul li a {
-                color:@GLOBAL_NAVIGATION_TEXT_COLOR;
-                display:block;
-                width:70px;
-                text-decoration:none;
-                padding-top:25px;
-            }
-
-            .navbar-menu ul li a:visited {
-                color:@GLOBAL_NAVIGATION_TEXT_COLOR;
-            }
+    }
 }
+
 
 
 /////////////////////////////////////////////////////////////////////////////////////
